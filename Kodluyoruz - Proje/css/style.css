@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+  /*CSS'de Kullanılacak Değişkenleri Tanımlıyorum*/
+:root{
+    --main-color: #e84242;
+    --black-color: #0e0e0e;
+    --border: 0.1rem solid rgba(255,255,255,0.4);
+}
+
+*{
+   /* Tüm CSS Kodlarına Aynılarını Yazmak Yerine Hepsine * İşaretiyle Müdahale Ediyorum*/
+   font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+body{
+    background-color: var(--main-color);
+}
+
+/*Yazıların Kopyalanmasını Engelliyorum*/
+p{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+h1{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+h3{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+span{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.fiyat{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.urunisim{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.footer{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+ 
+
+/*Tüm Section Etiketlerine Baştan Tanımlamamak İçin Topluca Padding Değeri Tanımlıyorum */
+section{
+    padding: 3.5rem 7%;
+}
+
+/*Tüm A Etiketleri İçin Renk Tanımlıyorum*/
+a{
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+/*Tüm butn Classların'da Kullanmak İçin Butn Kodları*/
+.butn{
+    margin: 1rem;
+    display: inline-block;
+    padding: 2rem 2rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: white;
+    background-color: var(--black-color);
+    cursor: pointer;
+
+}
+
+.butn:hover{
+    opacity: 0.9;
+}
+
+/*Tüm h1 Etiketlerine Baştan Tanımlamamak İçin Topluca  Özellik Tanımlıyorum */
+.sch1{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.1rem solid #fff;
+}
+
+/*Menu Yazısını Spana Aldığımız İçin Aynı İşlemi Onada Uyguluyoruz*/
+.sch1 span{
+    text-transform: uppercase;
+    color: var(--black-color);
+}
+
+/*Temel Tüm Html Kapsayan Kod*/
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/*Tarayıcının Scroll Barına Css Den Müdahale Edip Düzenliyoruz*/
+html::-webkit-scrollbar{
+    width: 0.8rem;
+    background-color: #fff;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: transparent;
+
+}
+
+html::-webkit-scrollbar-thumb{
+    border-radius: 3rem;
+    background-color: var(--black-color)
+
+}
+
+/*Header Başlangıç */
+
+.header .logo img{
+    height: 10rem;
+}
+
+.header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/*Header İçindeki A Etiketine Müdahale Ederek Düzenliyorum*/
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+}
+
+/*Header İçindeki A Etiketine Hover Olayı Veriyorum Ve Ek Olarak menohover Class'ı Tanımladığım Anasayfama Aynı Kodu Yazdırıyorum , İle*/
+.header .navbar .menuhover,
+.header .navbar a:hover{
+    border-color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+/*Header'da Bulunan İconlara Müdahale Ediyorum*/
+.header .buton button{
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+}
+
+/*Header Bitiş */
+
+
+
+/*Anasayfa Section Başlangıç */
+
+/*Arka Plan Fotoğrafı Ve Minimum Yüksekliğe Müdahale Ediyorum */
+.anasayfa{
+    min-height: 100vh;
+    background: url(../img/anasayfa-arkaplan.jpg) no-repeat;
+    opacity: 0.9;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/*Content Divi İçerisine Aldığım Arka Plan Yazılarının Max Genişliğini Ayarlıyorum*/
+.anasayfa .content{
+    max-width: 60rem;
+}
+
+/*Arka Plan Fotoğrafı'nın Üstünde Yazan H3 Etiketinin Boyutunu 6 Rem Yaparak Yüseltiyorum*/
+.anasayfa .content h3{
+    font-size: 6rem;
+    color: white;
+}
+
+.anasayfa .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #ccc;
+}
+
+/*Anasayfa Section Bitiş */
+
+/*Menü Section Başlangı. */
+
+/*Menü'ye Grid Yapısı İle Müdahale Ederek Yan Yana Gelmelerini Sağlıyorum*/
+.menu .menu-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+/*Menü Etrafındaki Div'in Ayarlamaları*/
+.menu .menu-container .kutu{
+    padding: 3rem;
+    background-color: white;
+    border-radius: 3rem;
+    background-color: #fff;
+    min-height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.menu .menu-container .kutu img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Menü Kategori Font Büyüklüğü*/
+.menu .menu-container .menu-kategori{
+    font-size: 1.2rem;
+}
+
+/*Menü Ürünlerinin İsimleri İçin Ayarlamalar*/
+.menu .menu-container .kutu h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+/*Menü Fiyat Yazısı İçin Gerekli Ayarlamalar*/
+.menu .menu-container .kutu .fiyat{
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+/*Menü Eski Fiyatın Üstünü Çizmek İçin Ayarlamalar*/
+.menu .menu-container .kutu .fiyat span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+
+#menu-btn{
+    display: none;
+}
+/*Menü Section Bitiş */
+
+
+/*Ürünler Section Başlangıç */
+
+/*Grid Yapısı İle Ürünleri Yan Yana Getiriyorum*/
+.urunler .kutu-hps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.urunler .kutu-hps .kutu {
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.urunler .kutu-hps .kutu .kutu-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.urunler .kutu-hps .kutu .kutu-head .urunbaslik {
+    font-size: 1.4rem;
+}
+
+.urunler .kutu-hps .kutu .kutu-head .urunisim {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+
+/*Dark Clasıı tanımlı ürün için yazıları beyaz yapıyorum*/
+.urunler .kutu-hps .kutu-dark .kutu-head .urunisim{
+    color: #fff;
+}
+
+
+.urunler .kutu-hps .kutu-dark .kutu-head .urunbaslik {
+  color: #fff;
+}
+
+.urunler .kutu-hps img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    border-radius: 3rem;
+  }
+
+  /*Dark  Clası Tanımlı 3. Ürünü Düzenliyoruz*/
+  .urunler .kutu-hps .kutu-dark img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: unset;
+  }
+
+
+.urunler .kutu-hps .kutu-bt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/*Fiyat Ve Cal Bilgilerinin Yerlerini Düzenliyorum */
+.urunler .kutu-hps .kutu-bt .bilgi{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*Fiyat Bilgisi İçin Yazıyı Büyütüyorum*/
+.urunler .kutu-hps .kutu-bt .bilgi .fiyat{
+    font-size: 3rem;
+}
+
+/*Fiyat Ve Cal Bilgilerinin Büyüklüklerini Düzenliyorum*/
+.urunler .kutu-hps .kutu-bt .bilgi .grcl{
+    font-size: 1.4rem;
+}
+
+/*Dark  Clası Tanımlı Olan 3. Ürün İçin Yazının Gözükmesi İçin Beyaz Renk Tanımlıyorum*/
+.urunler .kutu-hps .kutu-dark .kutu-bt .bilgi .grcl{
+    color: white;
+}
+
+.urunler .kutu-hps .kutu-dark .kutu-bt .bilgi .fiyat{
+    color: white;
+}
+
+/*Dark  Clası Tanımlı Olan 3. Ürün İçin Yazının Gözükmesi İçin Beyaz Renk Tanımlıyorum*/
+.urunler .kutu-hps .kutu-bt .info .fiyat{
+    color: #fff;
+}
+
+.urunler .kutu-hps .kutu-bt .btnpr a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 6.5rem;
+    border: 0.2rem solid var(--main-color);
+  }
+
+
+.urunler .kutu-hps .kutu-bt .btnpr a i {
+    font-size: 1.6rem;
+    color: var(--main-color);
+  }
+/*Ürünler Section Bitiş */
+
+
+/*! Hakkımızda Başlangıç */
+.hakkimizda .hakkımızdacl {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+}
+  
+.hakkimizda .hakkımızdacl .imghakkimizda {
+    flex: 1 1 45rem;
+}
+  
+.hakkimizda .hakkımızdacl img {
+    width: 100%;
+}
+  
+.hakkimizda .hakkımızdacl .yazi {
+    flex: 1 1 45rem;
+}
+
+/*Hakkımızda İçin h3 Etiketleri Arasında Yazılan Yazının Ayarlamaları*/
+  .hakkimizda .hakkımızdacl .yazi h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+  
+/*Hakkımızda İçin p Etiketleri Arasında Yazılan Yazının Ayarlamaları*/
+.hakkimizda .hakkımızdacl .yazi p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+} 
+  /*! Hakkımızda Bitiş */
+
+
+  /*! Müşteri Yorumları Başlangıç  */
+.musteriyorumlari .kutu-hepsi{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+  
+.musteriyorumlari .kutu-hepsi .kutu {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    border-radius: 3rem;
+}
+  
+/*! Müşteri Yorumları İçin P Etiketleri İle Yazılmış Yazıların Ayarlamaları  */
+.musteriyorumlari .kutu-hepsi .kutu p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 2rem 0;
+}
+  
+.musteriyorumlari .kutu-hepsi .kutu .musteri {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+/*! Müşteri Yorumları İçin h3 Etiketleri İle Yazılmış Yazıların Ayarlamaları  */
+.musteriyorumlari .kutu-hepsi .kutu h3 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+  
+/*! Müşteri Yorumları İçin iconlar  İle Yapılmış Yazıların Ayarlamaları  */
+.musteriyorumlari .kutu-hepsi .kutu .musteri-yildiz i{
+    font-size: 1.5rem;
+    color: gold;
+  }
+  
+  /*! Müşteri Yorumları Bitiş  */
+
+
+/*! İletişim Başlangıç  */
+.iletisim .kutu-iletisim{
+    display: flex;
+    background-color: var(--black-color);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+  
+.iletisim .kutu-iletisim .googlemaps {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+.iletisim .kutu-iletisim form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+  
+.iletisim .kutu-iletisim form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+  
+.iletisim .kutu-iletisim form .input{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: var(--border);
+}
+  
+.iletisim .kutu-iletisim form .input i{
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+  
+.iletisim .kutu-iletisim form .input input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background-color: transparent;
+}
+  
+.iletisim .kutu-iletisim form .butn {
+    color: var(--main-color);
+    background-color: #fff;
+    font-weight: bold;
+}
+  
+  /*! İletişim Bitiş  */
+
+
+/*! Footer Başlangıç  */
+
+.footer {
+    background-color: var(--black-color);
+    text-align: center;
+}
+     
+.footer .footersite {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 300;
+    padding-top: 1.5rem;
+}
+  
+
+.footeryazi{
+    color: #e84242;
+}
+  /*! Footer Bitiş */
+
+
+   /*! Responsive (Mobil Uyumluluk) Başlangıç  */
+@media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+  
+    .header {
+      padding: 1.5rem 2rem;
+    }
+  
+    .header .logo img {
+      height: 7rem;
+    }
+  
+    section {
+      padding: 2rem;
+    }
+  
+  }
+  
+  @media (max-width: 768px) {
+    .header #menu-btn {
+      display: inline-block;
+    }
+  
+    .header .navbar {
+      position: absolute;
+      top: 95%;
+      background-color: #fff;
+      height: calc(100vh - 9rem);
+      width: 30rem;
+      box-shadow: 0px 20px 14px 0px rgb(0 0 0 / 75%);
+      right: -100%;
+    }
+  
+    .header .navbar.active {
+      right: 3rem;
+    }
+  
+    .header .navbar a {
+      color: var(--black-color);
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    html {
+      font-size: 50%;
+    }
+  
+    .header #menu-btn{
+        display: inline-block;
+    }
+    
+    .header .search-form {
+      width: 30rem;
+    }
+  }
+  
+  /*! Responsive (Mobil Uyumluluk) Bitiş  */
